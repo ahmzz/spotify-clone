@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { DataLayer } from "./DataLayer";
-import { initialState, reducer } from "../reducer";
+import { initialState, reducer } from "./reducer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
