@@ -26,7 +26,7 @@ const Footer = () => {
         <SkipNextIcon className="footer__icon" />
         <RepeatIcon className="footer__green" />
       </div>
-      <div className="footer_right">
+      <div className="footer__right">
         <Grid container spacing={2}>
           <Grid item>
             <PlaylistPlayIcon />

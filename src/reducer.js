@@ -1,20 +1,46 @@
 export const initialState = {
   user: null,
   playlists: [],
+  spotify: null,
+  discover_weekly: null,
+  top_artists: null,
   playing: false,
   item: null,
-  token:
-    "BQDNwyDu7lGMpR8cMyafzBlDIlE1f9f9FtXn4baoFBC-awZSvY344OBpbRE5D0hybohuMYAL0mNOSwciDNEsDcsVd3dR9v2pVKXU1ampKu4NkMC4yw1lNcf0e2sAF_RVc4ipSz8lP_1Ycj8cxDhEeUedTVdlvNcUqgzh59VaUDVS046X85O-w1NlZFSTN25qWt_TEWq0FCqT4VbwupBy",
 };
 
 export const reducer = (state, action) => {
   console.log(action);
 
+  console.log(action);
   switch (action.type) {
     case "SET_USER":
       return {
         ...state,
         user: action.user,
+      };
+
+    case "SET_PLAYING":
+      return {
+        ...state,
+        playing: action.playing,
+      };
+
+    case "SET_ITEM":
+      return {
+        ...state,
+        item: action.item,
+      };
+
+    case "SET_DISCOVER_WEEKLY":
+      return {
+        ...state,
+        discover_weekly: action.discover_weekly,
+      };
+
+    case "SET_TOP_ARTISTS":
+      return {
+        ...state,
+        top_artists: action.top_artists,
       };
 
     case "SET_TOKEN":
@@ -23,12 +49,17 @@ export const reducer = (state, action) => {
         token: action.token,
       };
 
+    case "SET_SPOTIFY":
+      return {
+        ...state,
+        spotify: action.spotify,
+      };
+
     case "SET_PLAYLISTS":
       return {
         ...state,
         playlists: action.playlists,
       };
-
     default:
       return state;
   }
